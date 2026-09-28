@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chattanooga Winter Getaway</title>
+  <meta name="theme-color" content="#153126" />
+  <style>
+    :root{
+      --forest:#153126;--cream:#f4ecdf;--paper:#fffdf8;--ink:#18241d;
+      --muted:#5e675f;--sand:#d9c9ae;--blue:#183341;--line:#d9cfc1
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    img{display:block;width:100%}.serif{font-family:Georgia,"Times New Roman",serif}
+    .wrap{max-width:760px;margin:0 auto;background:var(--paper);box-shadow:0 0 0 1px rgba(0,0,0,.03)}
+    .eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+    .hero{min-height:92svh;position:relative;display:flex;align-items:flex-end;background:
+      linear-gradient(to bottom,rgba(8,16,13,.08),rgba(8,16,13,.2) 40%,rgba(8,16,13,.9)),
+      url("https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1600,q_80,w_1600/v1/clients/chattanooga/ChattanoogaRiverfront_5dc7c620-e3ad-4f1e-a1e0-f40ece366504.jpg") center/cover no-repeat;
+      color:white;padding:1.4rem}
+    .hero-card{background:rgba(15,36,28,.82);backdrop-filter:blur(8px);padding:1.35rem;border:1px solid rgba(255,255,255,.25);border-radius:1.4rem;width:100%}
+    .hero h1{font-size:clamp(3.3rem,15vw,6rem);line-height:.9;margin:.45rem 0 .65rem}
+    .hero p{font-size:1.15rem;margin:0 0 1rem}.chips{display:flex;gap:.5rem;flex-wrap:wrap}
+    .chip{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.45rem .7rem;font-size:.72rem;font-weight:700}
+    section{padding:3.3rem 1.35rem}.intro{background:var(--cream)}
+    .intro h2,.itinerary h2{font-size:clamp(2.4rem,10vw,4rem);line-height:1;margin:.4rem 0 1rem}
+    .intro p{font-size:1.06rem;line-height:1.7;color:#39483f}
+    .adventure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-top:1.5rem}
+    .adventure{background:#eadfce;border-radius:1rem;padding:1rem .6rem;text-align:center;font-size:.72rem;font-weight:800}
+    .itinerary{background:white}.day{display:grid;grid-template-columns:64px 1fr;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--line)}
+    .date{font-size:.72rem;letter-spacing:.08em;font-weight:800;color:#806b56;line-height:1.55}
+    .day h3{font-size:1.7rem;margin:0 0 .45rem}.day p{margin:0;color:var(--muted);line-height:1.6}
+    .day .mini{margin-top:.65rem;font-size:.72rem;font-weight:800;letter-spacing:.08em}
+    .chapter{padding:0}.chapter img{height:310px;object-fit:cover}
+    .chapter-copy{padding:2rem 1.35rem 2.5rem;background:var(--forest);color:white}
+    .chapter-copy.blue{background:var(--blue)}.chapter-copy.light{background:var(--cream);color:var(--ink)}
+    .chapter h2{font-size:2.7rem;line-height:1;margin:.45rem 0 .85rem}
+    .chapter p{line-height:1.65;margin:0}.chapter-copy.light p{color:#47534c}
+    .tagline{margin-top:1rem;font-size:.72rem;font-weight:800;letter-spacing:.12em}
+    .stay{background:var(--forest);color:white;text-align:center}
+    .stay-card{border:1px solid rgba(255,255,255,.35);border-radius:1.4rem;padding:2rem 1rem;margin-top:1rem;background:rgba(255,255,255,.05)}
+    .stay-card h2{font-size:2.5rem;font-style:italic;margin:.5rem 0}.stay-card p{color:#ece6dc}
+    .ending{text-align:center;background:var(--cream)}
+    .stats{display:flex;justify-content:center;gap:2.2rem;margin-bottom:2rem}.stats b{font:700 2.3rem Georgia,serif;display:block}
+    .stats span{font-size:.68rem;letter-spacing:.12em;font-weight:800;color:#806b56}
+    .ending h2{font-size:2.9rem;line-height:1;margin:0}.ending p{color:#667168}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(244,236,223,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06);display:flex;gap:.4rem;overflow:auto;padding:.65rem .8rem}
+    .nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-size:.72rem;font-weight:800;background:white;border-radius:999px;padding:.55rem .75rem;border:1px solid #e6ddd0}
+    @media(min-width:700px){.hero{padding:2rem}section{padding:4.5rem 3rem}.chapter-copy{padding:2.6rem 3rem 3rem}.chapter img{height:420px}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+<nav class="nav">
+<a href="#trip">Trip</a><a href="#itinerary">Itinerary</a><a href="#ruby">Ruby Falls</a><a href="#aquarium">Aquarium</a><a href="#afterglow">Afterglow</a><a href="#stay">Stay</a>
+</nav>
+
+<section class="hero" id="trip">
+<div class="hero-card">
+<div class="eyebrow">January 07 — 10 · 2027</div>
+<h1 class="serif">Chattanooga</h1>
+<p class="serif"><em>A winter getaway in the mountains.</em></p>
+<div class="chips"><span class="chip">3 nights</span><span class="chip">4 days</span><span class="chip">Tennessee</span></div>
+</div>
+</section>
+
+<section class="intro">
+<div class="eyebrow" style="color:#806b56">The getaway</div>
+<h2 class="serif">Mountains.<br>Caves.<br>City lights.</h2>
+<p>Four winter days in Chattanooga — exploring Lookout Mountain, venturing underground at Ruby Falls, wandering downtown by the Tennessee River, and seeing Rock City glow after dark.</p>
+<div class="adventure-grid"><div class="adventure">RUBY FALLS</div><div class="adventure">ROCK CITY</div><div class="adventure">AQUARIUM</div></div>
+</section>
+
+<section class="itinerary" id="itinerary">
+<div class="eyebrow" style="color:#806b56">The itinerary</div>
+<h2 class="serif">Four days away.</h2>
+
+<article class="day"><div class="date">THU<br>JAN 07</div><div><h3 class="serif">The Road Trip</h3><p>Jacksonville → Chattanooga. Head north in the morning, grab groceries, check in, and settle into our first cozy night away.</p><div class="mini">DRIVE · CHECK IN · DINNER · RELAX</div></div></article>
+
+<article class="day"><div class="date">FRI<br>JAN 08</div><div><h3 class="serif">Lookout Mountain</h3><p>Venture underground at Ruby Falls, take in Lookout Mountain, then enjoy an easy afternoon before getting dressed up for dinner.</p><div class="mini">RUBY FALLS · LOOKOUT MOUNTAIN · DINNER</div></div></article>
+
+<article class="day"><div class="date">SAT<br>JAN 09</div><div><h3 class="serif">Chattanooga & Afterglow</h3><p>Explore the Tennessee Aquarium, wander the riverfront and downtown, then head up Lookout Mountain as Rock City lights up after dark.</p><div class="mini">AQUARIUM · DOWNTOWN · ROCK CITY AFTERGLOW</div></div></article>
+
+<article class="day"><div class="date">SUN<br>JAN 10</div><div><h3 class="serif">One Last Morning</h3><p>Sleep in, have breakfast, enjoy one last slow morning, and then start the road home.</p><div class="mini">BREAKFAST · CHECK OUT · JACKSONVILLE</div></div></article>
+</section>
+
+<section class="chapter" id="ruby">
+<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_80,w_1200/v1/clients/chattanooga/Ruby_Falls_Inside_37ca1f1d-bf69-4dc3-9a53-914a32b5f466.jpg" alt="Ruby Falls in Chattanooga">
+<div class="chapter-copy"><div class="eyebrow" style="color:#d7bd93">Friday · Lookout Mountain</div><h2 class="serif">Ruby Falls</h2><p>Descend into Lookout Mountain and follow the cavern trail toward Chattanooga’s dramatic underground waterfall.</p><div class="tagline">CAVE WALK · WATERFALL · MOUNTAIN VIEWS</div></div>
+</section>
+
+<section class="chapter" id="aquarium">
+<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_80,w_1200/v1/clients/chattanooga/Tennessee_Aquarium_Exterior_0e964ed5-88a0-425e-8f74-08b1ad140b03.jpg" alt="Tennessee Aquarium in Chattanooga">
+<div class="chapter-copy blue"><div class="eyebrow" style="color:#bed1d8">Saturday · Downtown</div><h2 class="serif">Tennessee Aquarium</h2><p>Spend the morning exploring River Journey and Ocean Journey before stepping outside into Chattanooga’s riverfront district.</p><div class="tagline">RIVER JOURNEY · OCEAN JOURNEY · RIVERFRONT</div></div>
+</section>
+
+<section class="chapter">
+<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_900,q_80,w_1400/v1/clients/chattanooga/History_Walnut_Street_Bridge_Now_a9420be6-87f4-4000-8664-014e05d072ee.jpg" alt="Walnut Street Bridge over the Tennessee River">
+<div class="chapter-copy light"><div class="eyebrow" style="color:#806b56">Saturday · Afternoon</div><h2 class="serif">Along the River</h2><p>Slow things down with a walk around downtown, the riverfront, and Chattanooga’s iconic pedestrian bridge before the evening adventure.</p><div class="tagline">DOWNTOWN · WALNUT STREET BRIDGE · TENNESSEE RIVER</div></div>
+</section>
+
+<section class="chapter" id="afterglow">
+<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_80,w_1200/v1/clients/chattanooga/Rock_City_Enchanted_Garden_of_Lights_Enchanted_Trail_372fcbce-6aa0-457e-acbf-85993b107738.jpg" alt="Rock City Enchanted Garden of Lights">
+<div class="chapter-copy"><div class="eyebrow" style="color:#d7bd93">Saturday · After Dark</div><h2 class="serif">Enchanted Garden of Lights: Afterglow</h2><p>Finish the day at Rock City, wandering through softly illuminated trails, towering rock formations, and winter scenery high above Chattanooga.</p><div class="tagline">ROCK CITY · AFTERGLOW · WINTER LIGHTS</div></div>
+</section>
+
+<section class="stay" id="stay">
+<div class="eyebrow" style="color:#d7bd93">Where we're staying</div>
+<div class="stay-card"><div style="font-size:2.4rem">⌂</div><h2 class="serif">Coming soon…</h2><p>Our home in the mountains for three nights is still a secret.</p><div style="height:1px;background:rgba(255,255,255,.25);margin:1.5rem auto;width:78%"></div><div class="eyebrow" style="color:#d7bd93">3 nights · January 07 — 10</div></div>
+</section>
+
+<section class="ending">
+<div class="stats"><div><b>4</b><span>DAYS</span></div><div><b>3</b><span>NIGHTS</span></div><div><b>1</b><span>GETAWAY</span></div></div>
+<h2 class="serif">Chattanooga<br>awaits.</h2>
+<p class="eyebrow" style="margin-top:1rem;color:#806b56">January 07 — 10 · 2027</p>
+<p class="serif" style="font-size:1.15rem"><em>See you in Tennessee. ♡</em></p>
+</section>
+</main>
+</body>
+</html>

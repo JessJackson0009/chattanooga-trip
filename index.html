@@ -48,12 +48,34 @@
     .nav{position:sticky;top:0;z-index:20;background:rgba(244,236,223,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06);display:flex;gap:.4rem;overflow:auto;padding:.65rem .8rem}
     .nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-size:.72rem;font-weight:800;background:white;border-radius:999px;padding:.55rem .75rem;border:1px solid #e6ddd0}
     @media(min-width:700px){.hero{padding:2rem}section{padding:4.5rem 3rem}.chapter-copy{padding:2.6rem 3rem 3rem}.chapter img{height:420px}}
+
+    .couple-sticker{display:block;width:min(78%,330px);height:auto;margin:1rem auto 0;filter:drop-shadow(0 12px 16px rgba(0,0,0,.18));border-radius:1rem}
+    .roadtrip{background:linear-gradient(180deg,#fffdf8,#f4ecdf)}
+    .roadtrip h2{font-size:clamp(2.1rem,9vw,3.8rem);line-height:1.05;margin:.5rem 0}
+    .roadtrip>p{line-height:1.6;color:#47534c}
+    .route-card{background:#153126;color:#fff;border-radius:1.4rem;padding:1.25rem;overflow:hidden}
+    .route-track{display:flex;align-items:center;gap:.35rem;margin:1.2rem 0;position:relative}
+    .route-track::before{content:"";position:absolute;left:12px;right:12px;top:12px;border-top:2px dashed #d9c9ae}
+    .route-step{position:relative;flex:1;text-align:center}
+    .route-dot{display:block;width:25px;height:25px;margin:0 auto .45rem;background:#5b7666;border:2px solid #b4bcae;border-radius:50%;transition:background .2s,transform .2s}
+    .route-step.active .route-dot{background:#f2b66d;transform:scale(1.22)}
+    .route-step small{font-size:.65rem;font-weight:700}
+    .route-couple{width:min(65%,245px);margin:.6rem auto 0;animation:route-float 3s ease-in-out infinite}
+    .route-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem;margin:1rem 0}
+    .route-buttons button{font:inherit;text-align:left;border:1px solid #d9cfc1;border-radius:.8rem;background:#fffdf8;color:#153126;padding:.85rem;font-size:.84rem;font-weight:800;cursor:pointer}
+    .route-buttons button[aria-pressed="true"]{background:#153126;color:#fff}
+    .route-detail{background:white;padding:1.25rem;border:1px solid #e6ddd0;border-radius:1.2rem}
+    .route-detail h3{font:700 1.7rem Georgia,serif;margin:.3rem 0 .5rem}
+    .route-detail p{line-height:1.6;color:#47534c}
+    .route-detail a{display:inline-block;background:#153126;color:#fff;text-decoration:none;border-radius:999px;padding:.75rem 1rem;font-size:.85rem;font-weight:800}
+    @keyframes route-float{50%{transform:translateY(-6px)}}
+    @media(prefers-reduced-motion:reduce){.route-couple{animation:none}}
   </style>
 </head>
 <body>
 <main class="wrap">
 <nav class="nav">
-<a href="#trip">Trip</a><a href="#itinerary">Itinerary</a><a href="#ruby">Ruby Falls</a><a href="#aquarium">Aquarium</a><a href="#afterglow">Afterglow</a><a href="#dinner">Dinner</a><a href="#stay">Stay</a>
+<a href="#trip">Trip</a><a href="#roadtrip">Road Trip</a><a href="#itinerary">Itinerary</a><a href="#ruby">Ruby Falls</a><a href="#aquarium">Aquarium</a><a href="#afterglow">Afterglow</a><a href="#dinner">Dinner</a><a href="#stay">Stay</a>
 </nav>
 
 <section class="hero" id="trip">
@@ -61,7 +83,7 @@
 <div class="eyebrow">January 05 — 08 · 2027</div>
 <h1 class="serif">Chattanooga</h1>
 <p class="serif"><em>A winter getaway in the mountains.</em></p>
-<div class="chips"><span class="chip">3 nights</span><span class="chip">4 days</span><span class="chip">Tennessee</span></div>
+<div class="chips"><span class="chip">3 nights</span><span class="chip">4 days</span><span class="chip">Tennessee</span></div><img class="couple-sticker" src="assets/couple-cartoon.webp" alt="Cartoon of the couple packed for Chattanooga, with the taller blonde woman next to the shorter brown-haired man" width="120" height="150">
 </div>
 </section>
 
@@ -70,6 +92,37 @@
 <h2 class="serif">Mountains.<br>Caves.<br>City lights.</h2>
 <p>Four winter days in Chattanooga — exploring Lookout Mountain, venturing underground at Ruby Falls, wandering downtown by the Tennessee River, and seeing Rock City glow after dark.</p>
 <div class="adventure-grid"><div class="adventure">RUBY FALLS</div><div class="adventure">ROCK CITY</div><div class="adventure">AQUARIUM</div></div>
+</section>
+
+
+<section class="roadtrip" id="roadtrip">
+<div class="eyebrow" style="color:#806b56">Our little adventure</div>
+<h2 class="serif">The road to Chattanooga.</h2>
+<p>Pick a stop to see what's planned. Your cartoon travel crew is coming along for the ride!</p>
+<div class="route-card" aria-label="Interactive trip progress">
+<div class="eyebrow">Jacksonville → Chattanooga</div>
+<div class="route-track">
+<div class="route-step active"><span class="route-dot"></span><small>Start</small></div>
+<div class="route-step"><span class="route-dot"></span><small>Stay</small></div>
+<div class="route-step"><span class="route-dot"></span><small>Explore</small></div>
+<div class="route-step"><span class="route-dot"></span><small>Enjoy</small></div>
+</div>
+<img class="route-couple" src="assets/couple-cartoon.webp" alt="Our cartoon travel crew" width="120" height="150">
+</div>
+<div class="route-buttons" role="group" aria-label="Trip stops">
+<button type="button" data-stop="0" aria-pressed="true">🚗 Road Trip</button>
+<button type="button" data-stop="1" aria-pressed="false">🏡 Our Airbnb</button>
+<button type="button" data-stop="2" aria-pressed="false">💧 Ruby Falls</button>
+<button type="button" data-stop="3" aria-pressed="false">🐠 Aquarium</button>
+<button type="button" data-stop="4" aria-pressed="false">✨ Afterglow</button>
+<button type="button" data-stop="5" aria-pressed="false">🍝 Alleia</button>
+</div>
+<div class="route-detail" aria-live="polite">
+<div class="eyebrow" id="stopDate">Tuesday · January 5</div>
+<h3 id="stopTitle">Let the road trip begin!</h3>
+<p id="stopDescription">Leave Jacksonville, cue the playlist and head north to Chattanooga for four cozy winter days.</p>
+<a id="stopLink" href="#itinerary">See itinerary →</a>
+</div>
 </section>
 
 <section class="itinerary" id="itinerary">
@@ -144,5 +197,30 @@
 <p class="serif" style="font-size:1.15rem"><em>See you in Tennessee. ♡</em></p>
 </section>
 </main>
+
+<script>
+(function(){
+ const stops=[
+  {date:"Tuesday · January 5",title:"Let the road trip begin!",description:"Leave Jacksonville, cue the playlist and head north to Chattanooga for four cozy winter days.",link:"#itinerary",label:"See itinerary →",progress:0},
+  {date:"Tuesday · January 5",title:"Our cozy home base",description:"Check into The Chic Escape, unpack, play games and unwind in the hot tub.",link:"#stay",label:"Explore our stay →",progress:1},
+  {date:"Wednesday · January 6",title:"Underground at Ruby Falls",description:"Explore the cavern trail and see the waterfall inside Lookout Mountain.",link:"#ruby",label:"Discover Ruby Falls →",progress:2},
+  {date:"Thursday · January 7",title:"Tennessee Aquarium",description:"Spend the day exploring River Journey, Ocean Journey and the downtown riverfront.",link:"#aquarium",label:"Explore the aquarium →",progress:2},
+  {date:"Thursday · January 7",title:"Afterglow at Rock City",description:"Wander the illuminated trails and enjoy a magical night on Lookout Mountain.",link:"#afterglow",label:"See Afterglow →",progress:3},
+  {date:"Wednesday · January 6",title:"Dinner at Alleia",description:"Get dressed up for a cozy Italian dinner with house-made pasta and a warm atmosphere.",link:"#dinner",label:"See dinner plans →",progress:3}
+ ];
+ const buttons=[...document.querySelectorAll(".route-buttons button")];
+ const dots=[...document.querySelectorAll(".route-step")];
+ function choose(n){
+  const stop=stops[n];if(!stop)return;
+  buttons.forEach((b,i)=>b.setAttribute("aria-pressed",String(i===n)));
+  dots.forEach((d,i)=>d.classList.toggle("active",i<=stop.progress));
+  document.getElementById("stopDate").textContent=stop.date;
+  document.getElementById("stopTitle").textContent=stop.title;
+  document.getElementById("stopDescription").textContent=stop.description;
+  const link=document.getElementById("stopLink");link.href=stop.link;link.textContent=stop.label;
+ }
+ buttons.forEach((b,i)=>b.addEventListener("click",()=>choose(i)));
+})();
+</script>
 </body>
 </html>

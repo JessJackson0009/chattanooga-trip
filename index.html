@@ -17,7 +17,7 @@
     .eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
     .hero{min-height:92svh;position:relative;display:flex;align-items:flex-end;background:
       linear-gradient(to bottom,rgba(8,16,13,.08),rgba(8,16,13,.2) 40%,rgba(8,16,13,.9)),
-      url("https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1600,q_80,w_1600/v1/clients/chattanooga/ChattanoogaRiverfront_5dc7c620-e3ad-4f1e-a1e0-f40ece366504.jpg") center/cover no-repeat;
+      url("https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_900,q_80,w_1400/v1/clients/chattanooga/History_Walnut_Street_Bridge_Now_a9420be6-87f4-4000-8664-014e05d072ee.jpg") center/cover no-repeat;
       color:white;padding:1.4rem}
     .hero-card{background:rgba(15,36,28,.82);backdrop-filter:blur(8px);padding:1.35rem;border:1px solid rgba(255,255,255,.25);border-radius:1.4rem;width:100%}
     .hero h1{font-size:clamp(2rem,10vw,5rem);line-height:1;margin:.45rem 0 .65rem;max-width:100%;overflow-wrap:anywhere}
@@ -130,6 +130,29 @@
 @media(min-width:700px){.romance-story{padding:4rem 4rem 4.5rem}.story-sky{height:390px}.story-car{width:330px}}
 @media(prefers-reduced-motion:reduce){.story-car,.story-road:after,.story-cloud,.story-sun,.hero-card,.hero-card .couple-sticker,.story-heart{animation:none!important}.reveal-soft{opacity:1;transform:none}.map-car,.map-route-live,.story-card{transition:none}}
 
+
+/* Animated cartoon welcome and itinerary information */
+.hero{min-height:88svh;background-position:45% center;background-image:linear-gradient(180deg,rgba(25,28,29,.06),rgba(13,31,25,.16) 38%,rgba(10,23,19,.78) 100%),url("https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_900,q_80,w_1400/v1/clients/chattanooga/History_Walnut_Street_Bridge_Now_a9420be6-87f4-4000-8664-014e05d072ee.jpg")}
+.hero-card{position:relative;min-height:335px;overflow:hidden;padding:1.3rem 1.2rem 1.5rem;background:rgba(17,37,29,.79)}
+.hero-card>.eyebrow,.hero-card>h1,.hero-card>p{position:relative;z-index:3}
+.hero h1{font-size:clamp(2rem,9.3vw,4.5rem);line-height:.98;text-wrap:balance}
+.hero-card>.chips{position:relative;z-index:3;max-width:58%}
+.wave-figure{position:absolute;right:-.25rem;bottom:-1.25rem;width:clamp(147px,49vw,225px);aspect-ratio:320/427;z-index:2;filter:drop-shadow(0 10px 12px rgba(0,0,0,.3));pointer-events:none}
+.wave-figure img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+.wave-figure .wave-hand{transform-origin:71.4% 26.25%;animation:helloWave 2.6s ease-in-out infinite}
+.hero-card>.love-cta{position:relative;z-index:4;margin-top:5rem;max-width:52%;padding:.8rem 1rem;text-align:center}
+.story-sky{height:250px}
+.story-scenery-message{position:absolute;left:50%;top:36%;z-index:4;transform:translate(-50%,-50%);text-align:center;display:flex;flex-direction:column;align-items:center;gap:.35rem;color:#5d4246;font:italic 1.3rem/1.25 Georgia,serif;white-space:nowrap;text-shadow:0 1px 4px #fff4}
+.story-heart-icon{font-size:2.2rem;color:#97596d;animation:gentleBob 3.3s ease-in-out infinite}
+.day-links{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.85rem}
+.day-links a{display:inline-flex;align-items:center;gap:.35rem;max-width:100%;color:#294d3c;background:#f4ecdf;border:1px solid #dfd0bd;border-radius:999px;padding:.58rem .72rem;text-decoration:none;font-size:.73rem;line-height:1.25;font-weight:800;overflow-wrap:anywhere}
+.day-links a:focus-visible,.chapter-info-link:focus-visible{outline:3px solid #d59e61;outline-offset:3px}
+.chapter-info-link{display:inline-flex;margin-top:1rem;padding:.65rem .85rem;border-radius:999px;background:rgba(255,255,255,.13);color:inherit;border:1px solid currentColor;text-decoration:none;font-size:.79rem;font-weight:800}
+.chapter-copy.light .chapter-info-link{background:rgba(19,53,42,.07)}
+@keyframes helloWave{0%,10%,53%,100%{transform:rotate(0)}19%{transform:rotate(-14deg)}30%{transform:rotate(11deg)}40%{transform:rotate(-12deg)}48%{transform:rotate(6deg)}}
+@media(max-width:360px){.hero-card{padding:1.15rem .95rem}.hero-card>.love-cta{margin-top:5.7rem}.hero h1{font-size:9vw}.wave-figure{width:49vw}}
+@media(min-width:700px){.hero-card{min-height:420px}.wave-figure{width:250px}.hero-card>.love-cta{margin-top:8rem}.story-sky{height:330px}}
+@media(prefers-reduced-motion:reduce){.wave-figure .wave-hand,.story-heart-icon{animation:none}}
 </style>
 </head>
 <body>
@@ -143,7 +166,7 @@
 <div class="eyebrow">January 05 — 08 · 2027</div>
 <h1 class="serif">Chattanooga</h1>
 <p class="serif"><em>A winter getaway in the mountains.</em></p>
-<div class="chips"><span class="chip">3 nights</span><span class="chip">4 days</span><span class="chip">Tennessee</span></div><img class="couple-sticker" src="assets/couple-cartoon.webp" alt="Cartoon of the couple packed for Chattanooga, with the taller blonde woman next to the shorter brown-haired man" width="120" height="150">
+<div class="chips"><span class="chip">3 nights</span><span class="chip">4 days</span><span class="chip">Tennessee</span></div><div class="wave-figure" role="img" aria-label="A smiling cartoon man waving hello in front of Chattanooga's Walnut Street Bridge"><img class="wave-body" src="assets/waving-man-base.webp" width="320" height="427" alt="" decoding="async"><img class="wave-hand" src="assets/waving-man-hand.webp" width="320" height="427" alt="" decoding="async"></div>
 <a class="love-cta" href="#roadtrip">Begin our story ♡ ↓</a></div>
 </section>
 
@@ -160,10 +183,10 @@
 <div class="story-kicker">A little love story on the road ♡</div>
 <h2>Every mile, with you.</h2>
 <p class="story-sub">Four winter days, two favorite people, and a thousand little memories waiting to happen.</p>
-<div class="story-sky" aria-label="Animated sunset road trip with our cartoon characters">
+<div class="story-sky" aria-label="Animated sunset scenery with softly drifting clouds and a road">
 <div class="story-sun"></div><div class="story-cloud a"></div><div class="story-cloud b"></div>
 <div class="story-hills"></div><div class="story-road"></div>
-<img class="story-car" src="assets/couple-cartoon.webp" alt="Our cartoon selves traveling together — a shorter man and his taller girlfriend" loading="lazy">
+<div class="story-scenery-message" aria-hidden="true"><span class="story-heart-icon">♡</span><span>the adventure starts here</span><span class="story-heart-icon">♡</span></div>
 <span class="story-heart" aria-hidden="true">♥</span><span class="story-heart" aria-hidden="true">♥</span>
 </div>
 <div class="story-map">
@@ -193,33 +216,33 @@
 <div class="eyebrow" style="color:#806b56">The itinerary</div>
 <h2 class="serif">Four days away.</h2>
 
-<article class="day"><div class="date">TUE<br>JAN 05</div><div><h3 class="serif">The Road Trip</h3><p>Jacksonville → Chattanooga. Head north in the morning, grab groceries, check in, and settle into our first cozy night away.</p><div class="mini">DRIVE · CHECK IN · DINNER · RELAX</div></div></article>
+<article class="day"><div class="date">TUE<br>JAN 05</div><div><h3 class="serif">The Road Trip</h3><p>Jacksonville → Chattanooga. Head north in the morning, grab groceries, check in, and settle into our first cozy night away.</p><div class="mini">DRIVE · CHECK IN · DINNER · RELAX</div><div class="day-links"><a href="https://www.airbnb.com/rooms/1208766706300361106?adults=2&amp;check_in=2027-01-05&amp;check_out=2027-01-08" target="_blank" rel="noopener noreferrer">Our Airbnb <span aria-hidden="true">↗</span></a><a href="https://www.visitchattanooga.com/plan/visitor-center/" target="_blank" rel="noopener noreferrer">Visitor guide <span aria-hidden="true">↗</span></a></div></div></article>
 
-<article class="day"><div class="date">WED<br>JAN 06</div><div><h3 class="serif">Lookout Mountain</h3><p>Venture underground at Ruby Falls, take in Lookout Mountain, then enjoy an easy afternoon before getting dressed up for dinner.</p><div class="mini">RUBY FALLS · LOOKOUT MOUNTAIN · ALLEIA</div></div></article>
+<article class="day"><div class="date">WED<br>JAN 06</div><div><h3 class="serif">Lookout Mountain</h3><p>Venture underground at Ruby Falls, take in Lookout Mountain, then enjoy an easy afternoon before getting dressed up for dinner.</p><div class="mini">RUBY FALLS · LOOKOUT MOUNTAIN · ALLEIA</div><div class="day-links"><a href="https://www.rubyfalls.com/plan-your-visit/" target="_blank" rel="noopener noreferrer">Ruby Falls <span aria-hidden="true">↗</span></a><a href="https://www.visitchattanooga.com/things-to-do/outdoors/lookout-mountain/" target="_blank" rel="noopener noreferrer">Lookout Mountain <span aria-hidden="true">↗</span></a><a href="https://alleiarestaurant.com/" target="_blank" rel="noopener noreferrer">Alleia <span aria-hidden="true">↗</span></a></div></div></article>
 
-<article class="day"><div class="date">THU<br>JAN 07</div><div><h3 class="serif">Chattanooga & Afterglow</h3><p>Explore the Tennessee Aquarium, wander the riverfront and downtown, then head up Lookout Mountain as Rock City lights up after dark.</p><div class="mini">AQUARIUM · DOWNTOWN · ROCK CITY AFTERGLOW</div></div></article>
+<article class="day"><div class="date">THU<br>JAN 07</div><div><h3 class="serif">Chattanooga & Afterglow</h3><p>Explore the Tennessee Aquarium, wander the riverfront and downtown, then head up Lookout Mountain as Rock City lights up after dark.</p><div class="mini">AQUARIUM · DOWNTOWN · ROCK CITY AFTERGLOW</div><div class="day-links"><a href="https://tnaqua.org/visit/" target="_blank" rel="noopener noreferrer">Aquarium <span aria-hidden="true">↗</span></a><a href="https://chattanooga.gov/things-to-do/parks/walnut-street-bridge" target="_blank" rel="noopener noreferrer">Walnut Street Bridge <span aria-hidden="true">↗</span></a><a href="https://www.seerockcity.com/seasons-events/afterglow/" target="_blank" rel="noopener noreferrer">Rock City Afterglow <span aria-hidden="true">↗</span></a></div></div></article>
 
-<article class="day"><div class="date">FRI<br>JAN 08</div><div><h3 class="serif">One Last Morning</h3><p>Sleep in, have breakfast, enjoy one last slow morning, and then start the road home.</p><div class="mini">BREAKFAST · CHECK OUT · JACKSONVILLE</div></div></article>
+<article class="day"><div class="date">FRI<br>JAN 08</div><div><h3 class="serif">One Last Morning</h3><p>Sleep in, have breakfast, enjoy one last slow morning, and then start the road home.</p><div class="mini">BREAKFAST · CHECK OUT · JACKSONVILLE</div><div class="day-links"><a href="https://www.visitchattanooga.com/restaurants/breakfast-and-brunch/" target="_blank" rel="noopener noreferrer">Breakfast spots <span aria-hidden="true">↗</span></a><a href="https://www.airbnb.com/rooms/1208766706300361106?adults=2&amp;check_in=2027-01-05&amp;check_out=2027-01-08" target="_blank" rel="noopener noreferrer">Airbnb checkout <span aria-hidden="true">↗</span></a></div></div></article>
 </section>
 
 <section class="chapter" id="ruby">
 <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ruby%20Falls%2C%20TN%209.15.15%20%28172%29.jpg?width=1280" alt="Ruby Falls in Chattanooga">
-<div class="chapter-copy"><div class="eyebrow" style="color:#d7bd93">Wednesday · Lookout Mountain</div><h2 class="serif">Ruby Falls</h2><p>Descend into Lookout Mountain and follow the cavern trail toward Chattanooga’s dramatic underground waterfall.</p><div class="tagline">CAVE WALK · WATERFALL · MOUNTAIN VIEWS</div></div>
+<div class="chapter-copy"><div class="eyebrow" style="color:#d7bd93">Wednesday · Lookout Mountain</div><h2 class="serif">Ruby Falls</h2><p>Descend into Lookout Mountain and follow the cavern trail toward Chattanooga’s dramatic underground waterfall.</p><div class="tagline">CAVE WALK · WATERFALL · MOUNTAIN VIEWS</div><a class="chapter-info-link" href="https://www.rubyfalls.com/plan-your-visit/" target="_blank" rel="noopener noreferrer">Ruby Falls visitor information ↗</a></div>
 </section>
 
 <section class="chapter" id="aquarium">
 <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/TN%20Aquarium%2001.jpg?width=1280" alt="Tennessee Aquarium in Chattanooga">
-<div class="chapter-copy blue"><div class="eyebrow" style="color:#bed1d8">Thursday · Downtown</div><h2 class="serif">Tennessee Aquarium</h2><p>Spend the morning exploring River Journey and Ocean Journey before stepping outside into Chattanooga’s riverfront district.</p><div class="tagline">RIVER JOURNEY · OCEAN JOURNEY · RIVERFRONT</div></div>
+<div class="chapter-copy blue"><div class="eyebrow" style="color:#bed1d8">Thursday · Downtown</div><h2 class="serif">Tennessee Aquarium</h2><p>Spend the morning exploring River Journey and Ocean Journey before stepping outside into Chattanooga’s riverfront district.</p><div class="tagline">RIVER JOURNEY · OCEAN JOURNEY · RIVERFRONT</div><a class="chapter-info-link" href="https://tnaqua.org/visit/" target="_blank" rel="noopener noreferrer">Aquarium visiting information ↗</a></div>
 </section>
 
 <section class="chapter">
 <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_900,q_80,w_1400/v1/clients/chattanooga/History_Walnut_Street_Bridge_Now_a9420be6-87f4-4000-8664-014e05d072ee.jpg" alt="Walnut Street Bridge over the Tennessee River">
-<div class="chapter-copy light"><div class="eyebrow" style="color:#806b56">Thursday · Afternoon</div><h2 class="serif">Along the River</h2><p>Slow things down with a walk around downtown, the riverfront, and Chattanooga’s iconic pedestrian bridge before the evening adventure.</p><div class="tagline">DOWNTOWN · WALNUT STREET BRIDGE · TENNESSEE RIVER</div></div>
+<div class="chapter-copy light"><div class="eyebrow" style="color:#806b56">Thursday · Afternoon</div><h2 class="serif">Along the River</h2><p>Slow things down with a walk around downtown, the riverfront, and Chattanooga’s iconic pedestrian bridge before the evening adventure.</p><div class="tagline">DOWNTOWN · WALNUT STREET BRIDGE · TENNESSEE RIVER</div><a class="chapter-info-link" href="https://chattanooga.gov/things-to-do/parks/walnut-street-bridge" target="_blank" rel="noopener noreferrer">Walnut Street Bridge information ↗</a></div>
 </section>
 
 <section class="chapter" id="afterglow">
 <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_80,w_1200/v1/clients/chattanooga/Rock_City_Enchanted_Garden_of_Lights_Enchanted_Trail_372fcbce-6aa0-457e-acbf-85993b107738.jpg" alt="Rock City Enchanted Garden of Lights">
-<div class="chapter-copy"><div class="eyebrow" style="color:#d7bd93">Thursday · After Dark</div><h2 class="serif">Enchanted Garden of Lights: Afterglow</h2><p>Finish the day at Rock City, wandering through softly illuminated trails, towering rock formations, and winter scenery high above Chattanooga.</p><div class="tagline">ROCK CITY · AFTERGLOW · WINTER LIGHTS</div></div>
+<div class="chapter-copy"><div class="eyebrow" style="color:#d7bd93">Thursday · After Dark</div><h2 class="serif">Enchanted Garden of Lights: Afterglow</h2><p>Finish the day at Rock City, wandering through softly illuminated trails, towering rock formations, and winter scenery high above Chattanooga.</p><div class="tagline">ROCK CITY · AFTERGLOW · WINTER LIGHTS</div><a class="chapter-info-link" href="https://www.seerockcity.com/seasons-events/afterglow/" target="_blank" rel="noopener noreferrer">Rock City Afterglow details ↗</a></div>
 </section>
 
 
@@ -229,7 +252,7 @@
 <div class="eyebrow" style="color:#806b56">Wednesday · Dinner</div>
 <h2 class="serif">Alleia</h2>
 <p>End the day in Chattanooga’s Southside with a cozy Italian dinner at Alleia, known for house-made pasta, wood-fired pizza, and a warm, intimate atmosphere.</p>
-<div class="tagline">SOUTHSIDE · HOUSE-MADE PASTA · DINNER</div>
+<div class="tagline">SOUTHSIDE · HOUSE-MADE PASTA · DINNER</div><a class="chapter-info-link" href="https://alleiarestaurant.com/" target="_blank" rel="noopener noreferrer">Alleia official website ↗</a>
 </div>
 </section>
 
